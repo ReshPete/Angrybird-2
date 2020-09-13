@@ -1,5 +1,6 @@
 class BaseClass{
     constructor(x, y, width, height, angle) {
+      // Options for body
         var options = {
             'restitution':0.8,
             'friction':1.0,
@@ -12,6 +13,7 @@ class BaseClass{
         World.add(world, this.body);
       }
       display(){
+        // For displaying the body in each frame
         var angle = this.body.angle;
         push();
         translate(this.body.position.x, this.body.position.y);
