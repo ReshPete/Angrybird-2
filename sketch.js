@@ -7,10 +7,12 @@ var box1, pig1;
 var backgroundImg;
 
 function preload() {
+    // Loads first
     backgroundImg = loadImage("sprites/bg.png");
 }
 
 function setup(){
+    // Loads after preload(), bt before draw()
     var canvas = createCanvas(1200,400);
     engine = Engine.create();
     world = engine.world;
@@ -38,6 +40,7 @@ function setup(){
 }
 
 function draw(){
+    // Loads after setup(), in every frame
     background(backgroundImg);
     Engine.update(engine);
     console.log(box2.body.position.x);
